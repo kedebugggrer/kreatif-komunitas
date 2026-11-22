@@ -741,3 +741,60 @@ textarea:focus {
   color: var(--muted);
   font-size: 0.88rem;
 }
+
+:root { --muted: #626976; }
+button, select { font: inherit; }
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+.btn { background: var(--accent-dark); color: #fff; min-height: 44px; }
+.btn:hover { background: #ab372f; }
+.btn-ghost { background: transparent; color: var(--text); }
+.btn-ghost:hover { background: var(--accent-soft); color: var(--heading); }
+button:disabled, fieldset:disabled { cursor: not-allowed; opacity: .65; }
+.linkbtn { min-height: 44px; display: inline-flex; align-items: center; }
+input, select, textarea { font-size: 16px; }
+input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 3px; }
+select { width: 100%; min-height: 46px; margin-top: 4px; padding: 10px 12px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+fieldset { min-width: 0; border: 0; padding: 0; }
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 100; padding: 12px 20px; background: var(--surface); border: 2px solid var(--accent-dark); }
+.skip-link:focus { top: 12px; }
+.preview-banner { padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .8rem; color: var(--muted); }
+.preview-banner strong { color: var(--accent-dark); }
+.hero-title { max-width: 880px; font-size: clamp(2.25rem, 5vw, 4rem); letter-spacing: -.035em; }
+.hero-body { max-width: 680px; margin-top: 24px; color: var(--muted); font-size: 1.1rem; }
+.explore-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 20px; align-items: end; }
+.explore-toolbar label + label { margin-top: 0; }
+.filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.filter-chip { min-height: 44px; padding: 8px 18px; border: 1px solid var(--border); border-radius: 24px; background: transparent; color: var(--text); font-size: .9rem; }
+.filter-chip:hover { border-color: var(--accent-dark); }
+.filter-chip.selected { color: #fff; background: var(--text); border-color: var(--text); }
+.result-count { margin: 20px 0; color: var(--muted); font-size: .88rem; }
+.empty h3, .empty p { margin-bottom: 12px; }
+.workcard, .creatorcard, .profile-id { min-width: 0; }
+h1, h2, h3, p, .creatorcard-name, .creatorcard-username, .userchip, .tag { overflow-wrap: anywhere; }
+.avatar { overflow: hidden; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.image-strip, .upload-gallery { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+.image-thumb { width: 80px; height: 80px; padding: 3px; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius-sm); }
+.image-thumb[aria-pressed="true"] { border-color: var(--accent-dark); }
+.image-thumb img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+.upload-tile { width: 140px; overflow-wrap: anywhere; }
+.upload-tile img { width: 140px; height: 110px; object-fit: cover; border-radius: var(--radius-sm); }
+.upload-tile button { text-align: left; font-size: .8rem; }
+.workdetail-actions, .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.workdetail-desc, .profile-bio { white-space: pre-wrap; }
+.profile-stats { max-width: 100%; flex-wrap: wrap; gap: 20px; }
+.profile-website { display: inline-flex; min-height: 44px; align-items: center; color: var(--accent-dark); }
+.success-notice { margin-top: 16px; padding: 12px 16px; background: #eaf3ee; color: #23583e; border-radius: var(--radius-sm); }
+.auth-dialog { margin: auto; border: 1px solid var(--border); width: calc(100% - 32px); max-height: calc(100dvh - 40px); overflow-y: auto; }
+.auth-dialog::backdrop { background: rgba(17, 24, 39, .5); }
+.auth-switch { display: flex; margin-top: 8px; }
+@media (max-width: 560px) {
+  main { padding: 24px 20px 48px; }
+  .section { margin-top: 40px; }
+  .explore-toolbar { grid-template-columns: 1fr; gap: 12px; }
+  .hero-title { font-size: 2.4rem; }
+  .auth-dialog { padding: 24px; }
+  .topbar-inner { padding: 12px 20px; }
+  .topbar-user .userchip span:not(.avatar) { max-width: 115px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}

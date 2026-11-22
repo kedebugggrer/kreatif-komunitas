@@ -1,6 +1,3 @@
-const KEY = 'kreatif:v1'
-const SESSION_KEY = 'kreatif:session'
-
 export const seedUsers = [
   {
     username: 'bimaskara',
@@ -168,42 +165,14 @@ export const seedComments = [
   }
 ]
 
-export function loadState() {
-  try {
-    const raw = localStorage.getItem(KEY)
-    if (raw) {
-      const s = JSON.parse(raw)
-      if (s && Array.isArray(s.users) && Array.isArray(s.works)) return s
-    }
-  } catch (e) {
-    /* fall through to seed */
-  }
-  return { users: seedUsers, works: seedWorks, comments: seedComments }
-}
-
-export function saveState(state) {
-  try {
-    localStorage.setItem(KEY, JSON.stringify(state))
-  } catch (e) {
-    /* storage full or unavailable */
-  }
-}
-
-export function loadSession() {
-  try {
-    return localStorage.getItem(SESSION_KEY) || null
-  } catch {
-    return null
-  }
-}
-
-export function saveSession(username) {
-  try {
-    if (username) localStorage.setItem(SESSION_KEY, username)
-    else localStorage.removeItem(SESSION_KEY)
-  } catch {
-    /* ignore */
-  }
+export function workCategory(work) {
+  if (work.category) return work.category
+  const tags = work.tags.join(' ')
+  if (tags.includes('ilustrasi')) return 'Ilustrasi'
+  if (tags.includes('fotografi')) return 'Fotografi'
+  if (tags.includes('desain')) return 'Desain'
+  if (/lukis|keramik|patung/.test(tags)) return 'Seni'
+  return 'Lainnya'
 }
 
 export function normalizeUsername(raw) {
