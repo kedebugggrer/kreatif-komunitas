@@ -1,0 +1,6 @@
+- art-painting.jpg: Photo by Mondschwinge on Pixabay (https://pixabay.com/photos/painting-abstract-background-3135875/)
+- art-filmphoto.jpg: Photo by vojta_kucer on Pixabay (https://pixabay.com/photos/photographer-camera-photo-lentil-3624825/)
+- art-ceramics.jpg: Photo by Pexels on Pixabay (https://pixabay.com/photos/art-pottery-clay-craft-hands-man-1837073/)
+- art-poster.jpg: Photo by zivica on Pixabay (https://pixabay.com/photos/ink-paints-print-printing-inks-1602896/)
+- art-illustration.jpg: Photo by Pexels on Pixabay (https://pixabay.com/photos/hands-paint-brush-painting-1868562/)
+- art-sculpture.jpg: Photo by thekurupi on Pixabay (https://pixabay.com/photos/pottery-clay-potter-paraguay-7147634/)
